@@ -3,11 +3,11 @@ import './App.css';
 import Navbar from './components/Navbar';
 import News from './components/News';
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
-import { useState } from 'react';
 
 function App() {
-  // const [searchTerm,setSearchTerm] = useState("");
-  const apiKey = process.env.REACT_APP_NEWS_API
+  
+  const apiKey = process.env.REACT_APP_NEWS_API;
+  console.log(process.env.REACT_APP_NEWS_API);
   const pageSize = 5;
   return (
     <Router>
