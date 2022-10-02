@@ -1,0 +1,6 @@
+About the APP:-
+
+1. I created frontend using bootstrap and React.
+2. There was not much of backend work so I have not created the backend seperately.
+3. Newsapi.org website is used for the news API
+4. All the other components are made using javascript and react.
