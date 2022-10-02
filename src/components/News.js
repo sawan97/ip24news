@@ -7,7 +7,6 @@ const News = (props) => {
     const [totalResults,setTotalResults] = useState(0);
     const [page,setPage] = useState(1);
     const [query,setQuery] = useState("");
-    // const keys = ["title","description","author"]
 
     const getNews = async ()=>{
         const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=c70d3b12033644d69359a38c399464ce&page=${page}&pageSize=${props.pageSize}`;
@@ -33,14 +32,11 @@ const News = (props) => {
         return string[0].toUpperCase() + string.slice(1);
     }
     const search = (data)=>{ 
-        return data.filter((item)=> 
-          item.title.toLowerCase().includes(query)
+        return data.filter(item=> 
+          (item.title).toLowerCase().includes(query)
         );
     }
-    // const Search = (data)=>{
-    //   return data.filter((item)=>
-    //   keys.some((key)=>item[key].toLowerCase().includes(query)))
-    // }
+ 
   return (
     <InfiniteScroll
     dataLength={articles.length} 
